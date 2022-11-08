@@ -2,6 +2,12 @@
 
 window.addEventListener('DOMContentLoaded', init);
 
+/**
+ * Represents the page.
+ * @constructor
+ * @param {string} title - The title of the page.
+ * @param {string} author - The author of the page.
+ */
 function init() {
  
   const soundChoice = document.getElementById('horn-select'); 
