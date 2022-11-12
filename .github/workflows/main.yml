@@ -37,6 +37,8 @@ jobs:
           output_dir: ./out
           template: minami
           front_page: README.md
+      - name: Print
+        run: ls -la /home/runner/work/testElectronApp/testElectronApp/out
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
