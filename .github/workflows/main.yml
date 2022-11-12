@@ -10,7 +10,7 @@ jobs:
         run: npm install -g jsdoc
         
       - name: docFiles
-        run: jsdoc espose.js #ls -a $HOME/work/testElectronApp/testElectronApp/. 
+        run: ls -a ~/ #jsdoc espose.js #ls -a $HOME/work/testElectronApp/testElectronApp/. 
         
      # - name: moveDocFile
       #  run: cp out/* ~/work/testElectronApp/documentation/ 
