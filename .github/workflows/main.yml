@@ -7,14 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      #- name: installJSdocs
-      #  run: npm install -g jsdoc
-        
-    - name: docFiles
+
     - run: mkdir -p path/to/artifact
-    
+
     - run: echo hello > path/to/artifact/world.txt
-    
+
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
@@ -24,4 +21,6 @@ jobs:
         
      # - name: moveDocFile
       #  run: cp out/* ~/work/testElectronApp/documentation/ 
-    
+    #- name: installJSdocs
+    # - name: docFiles
+      #  run: npm install -g jsdoc
