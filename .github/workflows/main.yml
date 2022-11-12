@@ -6,6 +6,9 @@ jobs:
   autoDoc:
     runs-on: ubuntu-latest
     steps:
+      - name: installJSdocs
+        run: npm install -g jsdoc
+        
       - name: docFiles
         run: jsdoc ~/espose.js
         
