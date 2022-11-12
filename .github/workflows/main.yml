@@ -44,8 +44,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload documentation folder only
-          path: './documentation/'
+          # Upload documentation folder only ./documentation/
+          path: '/home/runner/work/testElectronApp/testElectronApp/out/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
