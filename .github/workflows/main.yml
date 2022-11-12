@@ -9,14 +9,14 @@ jobs:
   myJob:
     runs-on: ubuntu-latest
     steps:
-    -  name: installJSdocs
-    -  run: npm install -g jsdoc
-    
-    -  name: docFiles
-    -  run: jsdoc **.js
-    
-    -  name: pdocFiles
-    -  run: echo ~/.bash_history
+      -  name: installJSdocs
+      -  run: npm install -g jsdoc
+
+     # -  name: docFiles
+     # -  run: jsdoc **.js
+
+     # -  name: pdocFiles
+     # -  run: echo ~/.bash_history
     
     
       
