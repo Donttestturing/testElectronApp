@@ -13,5 +13,5 @@ jobs:
         run: ls ~/work/testElectronApp #jsdoc ~/work/testElectronApp/espose.js
         
       - name: moveDocFile
-        #run: cp out/* ~/work/testElectronApp/documentation/ 
+        run: cp out/* ~/work/testElectronApp/documentation/ 
     
