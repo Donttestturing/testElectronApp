@@ -6,12 +6,12 @@ jobs:
   autoDoc:
     runs-on: ubuntu-latest
     steps:
-      - name: installJSdocs
-        run: npm install -g jsdoc
+      #- name: installJSdocs
+      #  run: npm install -g jsdoc
         
       - name: docFiles
-        run: ls $HOME #jsdoc ~/work/testElectronApp/espose.js
+        run: ls $HOME/work #jsdoc ~/work/testElectronApp/espose.js
         
-      - name: moveDocFile
-        run: cp out/* ~/work/testElectronApp/documentation/ 
+     # - name: moveDocFile
+      #  run: cp out/* ~/work/testElectronApp/documentation/ 
     
