@@ -1,3 +1,3 @@
-# my electron app
+# Tester electron app
  
-[Documentation Page](https://donttestturing.github.io/testElectronApp/documentation/index.html)
+[Group Repo Link](https://github.com/cse110-fa22-group13/cse110-fa22-group13)
