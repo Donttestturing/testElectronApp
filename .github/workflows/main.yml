@@ -6,11 +6,20 @@ jobs:
   autoDoc:
     runs-on: ubuntu-latest
     steps:
-      - name: installJSdocs
-        run: npm install -g jsdoc
+    - uses: actions/checkout@v2
+      #- name: installJSdocs
+      #  run: npm install -g jsdoc
         
-      - name: docFiles
-        run: ls -a ${workspace} #jsdoc espose.js #ls -a $HOME/work/testElectronApp/testElectronApp/. 
+    - name: docFiles
+    - run: mkdir -p path/to/artifact
+    - run: echo hello > path/to/artifact/world.txt
+    
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: path/to/artifact/world.txt
+        
+    #- run: ls -a ${workspace} #jsdoc espose.js 
         
      # - name: moveDocFile
       #  run: cp out/* ~/work/testElectronApp/documentation/ 
