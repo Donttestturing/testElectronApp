@@ -7,11 +7,11 @@ on:
     - main
     
 jobs: 
-  autoDoc:
-    runs-on: ubuntu-latest
-    steps:
-      -  name: installJSdocs
-         run: npm install -g jsdoc
+  #autoDoc:
+    #runs-on: ubuntu-latest
+    #steps:
+     # -  name: installJSdocs
+     #    run: npm install -g jsdoc
   file_existence:
     runs-on: ubuntu-latest
     steps:
@@ -27,7 +27,8 @@ jobs:
       - name: File exists
         if: steps.check_files.outputs.files_exists == 'true'
         # Only runs if all of the files exists
-        run: echo All files exists!
+        run: echo All files exists! ${steps.check_files.outputs}
+        
 
 
 
