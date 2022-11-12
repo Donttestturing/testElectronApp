@@ -1,3 +1,3 @@
 # my electron app
  
-https://Donttestturing.github.io/testElectronApp/index.html
+[Documentation Page](https://donttestturing.github.io/testElectronApp/documentation/index.html)
