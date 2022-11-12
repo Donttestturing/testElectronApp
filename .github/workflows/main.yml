@@ -21,7 +21,7 @@ jobs:
           front_page: README.md
 
       - name: Print
-        run: cat ./out/README.md
+        run: cat /home/runner/work/testElectronApp/testElectronApp/README.md
       #- name: Deploy
       # uses: peaceiris/actions-gh-pages@v3
        # with:
