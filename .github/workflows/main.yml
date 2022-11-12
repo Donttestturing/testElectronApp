@@ -33,19 +33,19 @@ jobs:
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
-          source_dir: ./
+          source_dir: ./src
           output_dir: ./out
           template: minami
           front_page: README.md
       - name: Print
-        run: ls -la /home/runner/work/testElectronApp/testElectronApp/out
+        run: ls -la /home/runner/work/testElectronApp/testElectronApp/out/
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload documentation folder only ./documentation/ a
+          path: '/home/runner/work/testElectronApp/testElectronApp/out/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
