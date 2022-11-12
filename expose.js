@@ -1,5 +1,10 @@
 // expose.js
-
+/**
+ * Represents the DOM.
+ * @event
+ * @param {string} DOMContentLoaded - Event name
+ * @param {object} init - The object of the html page
+ */
 window.addEventListener('DOMContentLoaded', init);
 
 /**
