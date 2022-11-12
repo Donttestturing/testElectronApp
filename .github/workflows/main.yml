@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+    - main
+jobs: 
+  autoDoc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docFiles
+        run: jsdoc ~/espose.js
+        
+      - name: moveDocFile
+        run: cp out/* ~/testElectronApp/documentation/ 
+    
