@@ -7,9 +7,12 @@ on:
     - main
     
 jobs: 
-  #autoDoc:
-    #runs-on: ubuntu-latest
-    #steps:
+  autoDoc:
+    runs-on: ubuntu-latest
+    steps:
+    - name: List files in the repository
+      run: |
+        ls ${{ github.workspace }}
      # -  name: installJSdocs
      #    run: npm install -g jsdoc
   file_existence:
