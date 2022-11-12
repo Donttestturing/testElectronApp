@@ -12,11 +12,11 @@ jobs:
       -  name: installJSdocs
          run: npm install -g jsdoc
 
-      -  name: docFiles
-         run: jsdoc **.js
+     # -  name: docFiles
+      #   run: jsdoc **.js
 
-      -  name: pdocFiles
-         run: echo ~/.bash_history
+     # -  name: pdocFiles
+      #   run: echo ~/.bash_history
     
     
       
