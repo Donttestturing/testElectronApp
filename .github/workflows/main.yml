@@ -33,7 +33,7 @@ jobs:
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
-          source_dir: ./
+          source_dir: .
           output_dir: ./out
           template: minami
           front_page: README.md
@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
+          # Upload documentation folder only
           path: './documentation/'
       - name: Deploy to GitHub Pages
         id: deployment
