@@ -1,7 +1,8 @@
 // expose.js
+
 /**
  * Represents the DOM.
- * @event
+ * @function eventToGetTheDOM
  * @param {string} DOMContentLoaded - Event name
  * @param {object} init - The object of the html page
  */
@@ -42,9 +43,10 @@ function init() {
     }
 
   });
+
   /**
  * Represents the scroll bar of the volume
- * @event
+ * @event scrollInput
  * @param {string} input - Event name
  * @param {object} event - The the input event that occurs when clicking the volume bar and changing it.
  * "I must not fear.
@@ -73,10 +75,11 @@ Where the fear has gone there will be nothing. Only I will remain."
     
     soundChosen.volume = event.target.value/100; 
   });
+
   /**
  * Represents the button being clicked event
- * @event
- * @unfinished
+ * @event onClick
+ * @description unfinished
  * @param {string} click - Event name for mouse click
  * @param {object} event - The the input event that occurs when clicking button
  * 
