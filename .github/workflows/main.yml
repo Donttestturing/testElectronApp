@@ -21,16 +21,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2
-      - name: Install eslint
-        run: npm install -g eslint
-      - name: Run ESLint config
-        run: npm init @eslint/config -- --config semistandard,standard
-      - name: Install yarn
-        run: yarn 
-      - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: stefanoeb/eslint-action@1.0.2
+
         
