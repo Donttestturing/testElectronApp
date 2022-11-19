@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Print
-        run: ls -la /home/runner/work/testElectronApp/testElectronApp/
+        run: ls -la /home/runner/work/testElectronApp/testElectronApp/src
       
       - uses: stefanoeb/eslint-action@1.0.2
         with:
