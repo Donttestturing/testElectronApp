@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print
-        run: ls -la /home/runner/work/testElectronApp/testElectronApp/src
+        run: ls -la /home/runner/work/testElectronApp/testElectronApp/
       - uses: actions/checkout@v1
       - uses: stefanoeb/eslint-action@1.0.2
         with:
