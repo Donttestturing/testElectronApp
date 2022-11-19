@@ -13,7 +13,7 @@
 */
  class BookEntry {
     /**
-     * 
+     * @BookEntry
      * @constructor The constructor for the BookEntry Class,
      * @description which takes in 9 pieces of information to represent a BookEntry, 
      * which is more than simply a book, it is also user information related to reading that book. 
@@ -42,6 +42,7 @@
     }
 
     /**
+     * @BookEntry
      * @function printBookEntry
      * @description Function which returns a formatted string representing the BookEntry
      * @return {string} 
@@ -51,6 +52,7 @@
     }
 
     /**
+     * @BookEntry
      * @function Function to set the tags Set which represents genres for the book
      * @param {Set} tagsToAdd
      */
@@ -66,6 +68,7 @@
 //    } 
 
     /**
+     * @BookEntry
      * @function Function to set the dateRead which represents the date the book was read
      * @param {Date} dateToSet
      */
@@ -77,6 +80,7 @@
     } 
 
     /**
+     * @BookEntry
      * @function Function to set the rating for the book, which should be between 0 and 10
      * @param {Number} ratingToSet
      */
@@ -96,6 +100,7 @@
     } 
 
     /**
+     * @BookEntry
      * @function set pageProgress 
      * @description Function to set the pageProgress which represents the current page number the user is on for the book
      * @param {Number} pageProgressToSet
@@ -120,10 +125,11 @@
     } 
 
     /**
-     * @function Function to set the status of the book which represents the read status of the book, can be planned, in progress, and completed
+     * @BookEntry
+     * @function set status Function to set the status of the book which represents the read status of the book, can be planned, in progress, and completed
      * @param {string} statusToSet
      */
- /*    set status(statusToSet){
+     set status(statusToSet){
         if(typeof statusToSet !== 'string'){
             console.error('The status passed in was not of type string, did not set:', statusToSet);
             return;
@@ -133,7 +139,7 @@
             console.error('The status passed in was not one of the 3 possibilities, completed, in progress, and planned, did not set:', statusToSet);
             return;
         }
-    } */
+    } 
 
     /**
      * @function Function to set the user's review for the book
@@ -212,8 +218,10 @@
 
 }
 /**
- * TODO
- * @function
+ * @BookEntry
+ * 
+ * @function bookentry
+ * @description
 */
 function bookentry(pTags, pDateRead, pRating, pPageProgress, pStatus, reviewTextBody, ISBN, authorName, title) {
     return new BookEntry(pTags, pDateRead, pRating, pPageProgress, pStatus, reviewTextBody, ISBN, authorName, title);
