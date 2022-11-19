@@ -225,7 +225,7 @@
  * @BookEntry
  * 
  * @function bookentry
- * @description
+ * @description function which creates a new bookEntry object outside of the class.
 */
 function bookentry(pTags, pDateRead, pRating, pPageProgress, pStatus, reviewTextBody, ISBN, authorName, title) {
     return new BookEntry(pTags, pDateRead, pRating, pPageProgress, pStatus, reviewTextBody, ISBN, authorName, title);
