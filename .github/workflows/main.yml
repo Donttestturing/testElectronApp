@@ -30,35 +30,7 @@ jobs:
       - name: Install yarn
         run: yarn 
       - name: Run ESLint config
-        run: npm init @eslint/config
+        run: npm init @eslint/config -- --config semistandard,standard
       - name: Run ESLint
         run: eslint . --ext .js,.jsx,.ts,.tsx
         
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Build
-        uses: andstor/jsdoc-action@v1
-        with:
-          source_dir: ./src
-          output_dir: ./out
-          template: minami
-          front_page: README.md
-      - name: Print
-        run: ls -la /home/runner/work/testElectronApp/testElectronApp/out/
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload documentation folder only ./documentation/ a
-          path: '/home/runner/work/testElectronApp/testElectronApp/out/'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
