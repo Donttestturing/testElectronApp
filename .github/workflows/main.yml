@@ -21,15 +21,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  eslint:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Print
-        run: ls -la /home/runner/work/testElectronApp/testElectronApp/src
-      
-      - uses: stefanoeb/eslint-action@1.0.2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build
+        uses: andstor/jsdoc-action@v1
         with:
-          files: ./src/expose.js
+          source_dir: ./src
+          output_dir: ./out
+          template: minami
+          front_page: README.md
+      - name: Print
+        run: ls -la /home/runner/work/testElectronApp/testElectronApp/out/
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload documentation folder only ./documentation/ a
+          path: '/home/runner/work/testElectronApp/testElectronApp/out/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+
 
         
