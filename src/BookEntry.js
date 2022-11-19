@@ -5,17 +5,13 @@
 */
  const STATUSES = ['completed', 'in progress', 'planned']
 
-/**
- *  @class
-* The BookEntry class, which represents a book entry, which includes a book and the requisite information like title, ISBN, and authorName, as well as ancillary information like the status of being read, 
-* the current review for the book, the genres the book is tagged in, the date the book was read (if finished) and the current page progress of the user for that book.
-*
-*/
+
  class BookEntry {
     /**
      * @BookEntry
-     * @constructor The constructor for the BookEntry Class,
-     * @description which takes in 9 pieces of information to represent a BookEntry, 
+     * @class The BookEntry class, which represents a book entry, which includes a book and the requisite information like title, ISBN, and authorName, as well as ancillary information like the status of being read, 
+     * the current review for the book, the genres the book is tagged in, the date the book was read (if finished) and the current page progress of the user for that book. 
+     * @description The constructor for the BookEntry Class is below, which takes in 9 pieces of information to represent a BookEntry, 
      * which is more than simply a book, it is also user information related to reading that book. 
      * @param {Set} tags - a Set DS to hold the tags representing genres for the book
      * @param {Date} dateRead - the date the book was read
