@@ -11,9 +11,9 @@
 */
  class BookEntry {
     /**
-     * @constructor
      * The constructor for the BookEntry Class, which takes in 9 pieces of information to represent a BookEntry, 
      * which is more than simply a book, it is also user information related to reading that book. 
+     * @constructor
      * @param {Set} tags - a Set DS to hold the tags representing genres for the book
      * @param {Date} dateRead - the date the book was read
      * @param {Number} rating - a number rating, representing the rating the user has given the book
