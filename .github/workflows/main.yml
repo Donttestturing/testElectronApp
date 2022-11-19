@@ -25,12 +25,8 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v2
-      - name: Install eslint
-        run: npm install -g eslint
       - name: Install yarn
         run: yarn 
-      - name: Run ESLint config
-        run: npm init @eslint/config -- --config semistandard,standard
       - name: Run ESLint
         run: eslint . --ext .js,.jsx,.ts,.tsx
         
