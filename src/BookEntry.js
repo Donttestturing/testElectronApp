@@ -68,6 +68,7 @@
 //    } 
 
     /**
+     * @set
      * @BookEntry
      * @function Function to set the dateRead which represents the date the book was read
      * @param {Date} dateToSet
@@ -80,6 +81,7 @@
     } 
 
     /**
+     * @set
      * @BookEntry
      * @function Function to set the rating for the book, which should be between 0 and 10
      * @param {Number} ratingToSet
@@ -100,6 +102,7 @@
     } 
 
     /**
+     * @set
      * @BookEntry
      * @function set pageProgress 
      * @description Function to set the pageProgress which represents the current page number the user is on for the book
@@ -125,6 +128,7 @@
     } 
 
     /**
+     * @set
      * @BookEntry
      * @function set status Function to set the status of the book which represents the read status of the book, can be planned, in progress, and completed
      * @param {string} statusToSet
