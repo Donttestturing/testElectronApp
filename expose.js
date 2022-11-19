@@ -1,7 +1,8 @@
 // expose.js
+
 /**
  * Represents the DOM.
- * @event
+ * @function eventToGetTheDOM
  * @param {string} DOMContentLoaded - Event name
  * @param {object} init - The object of the html page
  */
@@ -43,6 +44,19 @@ function init() {
 
   });
 
+  /**
+ * Represents the scroll bar of the volume
+ * @event scrollInput
+ * @param {string} input - Event name
+ * @param {object} event - The the input event that occurs when clicking the volume bar and changing it.
+ * "I must not fear.
+Fear is the mind-killer.
+Fear is the little-death that brings total obliteration.
+I will face my fear.
+I will permit it to pass over me and through me.
+And when it has gone past, I will turn the inner eye to see its path.
+Where the fear has gone there will be nothing. Only I will remain."
+ */
   volumeChoice.addEventListener('input', (event) => {
 
     const volumeImage = document.getElementsByTagName('img')[1];
@@ -62,6 +76,15 @@ function init() {
     soundChosen.volume = event.target.value/100; 
   });
 
+  /**
+ * Represents the button being clicked event
+ * @event onClick
+ * @description unfinished
+ * @param {string} click - Event name for mouse click
+ * @param {object} event - The the input event that occurs when clicking button
+ * 
+ * Though this is from lab 7, I have not implemented the party horn confetti functionality because of dependency concerns.
+ */
   buttons[0].addEventListener('click', (event) => {           //button gets clicked event, receiving correctly, need to play
     /*if(soundChoice.value == 'party-horn'){
       jsConfetti.addConfetti({
