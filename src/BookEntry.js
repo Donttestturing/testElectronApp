@@ -1,6 +1,6 @@
 /**
- * @constant
-* The STATUSES constant which holds the 3 possibilities for the status variable: completed, in progress, and planned
+ * @constant STATUSES
+*  The STATUSES constant which holds the 3 possibilities for the status variable: completed, in progress, and planned
 * 
 */
  const STATUSES = ['completed', 'in progress', 'planned']
