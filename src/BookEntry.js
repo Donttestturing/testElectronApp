@@ -1,19 +1,22 @@
 /**
+ * @constant
 * The STATUSES constant which holds the 3 possibilities for the status variable: completed, in progress, and planned
-* @constant
+* 
 */
  const STATUSES = ['completed', 'in progress', 'planned']
 
 /**
+ *  @class
 * The BookEntry class, which represents a book entry, which includes a book and the requisite information like title, ISBN, and authorName, as well as ancillary information like the status of being read, 
 * the current review for the book, the genres the book is tagged in, the date the book was read (if finished) and the current page progress of the user for that book.
-* @class
+*
 */
  class BookEntry {
     /**
-     * The constructor for the BookEntry Class, which takes in 9 pieces of information to represent a BookEntry, 
+     * 
+     * @constructor The constructor for the BookEntry Class,
+     * @description which takes in 9 pieces of information to represent a BookEntry, 
      * which is more than simply a book, it is also user information related to reading that book. 
-     * @constructor
      * @param {Set} tags - a Set DS to hold the tags representing genres for the book
      * @param {Date} dateRead - the date the book was read
      * @param {Number} rating - a number rating, representing the rating the user has given the book
@@ -39,7 +42,8 @@
     }
 
     /**
-     * @function Function which returns a formatted string representing the BookEntry
+     * @function printBookEntry
+     * @description Function which returns a formatted string representing the BookEntry
      * @return {string} 
      */
      printBookEntry() {
@@ -65,18 +69,18 @@
      * @function Function to set the dateRead which represents the date the book was read
      * @param {Date} dateToSet
      */
-/*    set dateRead(dateToSet){
+    set dateRead(dateToSet){
         if(typeof dateToSet != 'object'){
             console.error('The date passed in was not an object, did not set:', dateToSet);
             return;
         }
-    } */
+    } 
 
     /**
      * @function Function to set the rating for the book, which should be between 0 and 10
      * @param {Number} ratingToSet
      */
-/*     set rating(ratingToSet){
+     set rating(ratingToSet){
         if(typeof ratingToSet != 'number'){
             console.error('The rating passed in was not of type Number, did not set:', ratingToSet);
             return;
@@ -89,13 +93,14 @@
             console.error('The rating passed in was not between 0 and 10, end inclusive, did not set:', ratingToSet);
             return;
         }
-    } */
+    } 
 
     /**
-     * @function Function to set the pageProgress which represents the current page number the user is on for the book
+     * @function set pageProgress 
+     * @description Function to set the pageProgress which represents the current page number the user is on for the book
      * @param {Number} pageProgressToSet
      */
-/*     set pageProgress(pageProgressToSet){
+     set pageProgress(pageProgressToSet){
         if(typeof pageProgressToSet != 'number'){
             console.error('The page progress passed in was not of type Number, did not set:', pageProgressToSet);
             return;
@@ -112,7 +117,7 @@
             console.error('The page progress passed in was less than the current page progress, did not set:', pageProgressToSet);
             return;
         }
-    } */
+    } 
 
     /**
      * @function Function to set the status of the book which represents the read status of the book, can be planned, in progress, and completed
